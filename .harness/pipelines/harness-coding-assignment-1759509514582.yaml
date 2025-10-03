@@ -26,6 +26,13 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: Run
+                  name: python version check
+                  identifier: python_version_check
+                  spec:
+                    shell: Python
+                    command: python --version
           platform:
             arch: Arm64
             os: MacOS
