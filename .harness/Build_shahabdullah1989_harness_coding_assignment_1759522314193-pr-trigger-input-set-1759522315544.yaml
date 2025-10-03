@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_shahabdullah1989_harness_coding_assignment_1759522314193-pr-trigger-input-set
+  identifier: Build_shahabdullah1989_harness_coding_assignment_1759522314193prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Coding_Assessment
+  pipeline:
+    identifier: Build_shahabdullah1989_harness_coding_assignment_1759522314193
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
