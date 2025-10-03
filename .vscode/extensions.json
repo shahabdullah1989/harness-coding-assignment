@@ -1,0 +1,12 @@
+{
+  // Microsoft Python extensions
+  // SonarLint highlights bugs and security vulnerabilities as you write code, with remediation guidance
+  // Hadolint shows Dockerfile inline compliance suggestions
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.pylint",
+    "ms-python.flake8",
+    "sonarsource.sonarlint-vscode",
+    "exiasr.hadolint"
+  ]
+}
