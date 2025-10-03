@@ -32,9 +32,7 @@ pipeline:
                   identifier: python_version_check
                   spec:
                     shell: Python
-                    command: |-
-                      |-
-                              python -m pip install --upgrade pip
+                    command: python -m pip install --upgrade pip
           platform:
             arch: Arm64
             os: MacOS
