@@ -24,8 +24,8 @@ pipeline:
                   name: test
                   identifier: test
                   spec:
-                    shell: Python
-                    command: |-
+                    container: python
+                    script: |-
                       |- pip install -r requirements.txt
                       pytest
           platform:
