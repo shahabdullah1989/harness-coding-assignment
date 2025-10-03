@@ -1,0 +1,38 @@
+pipeline:
+  identifier: Build_shahabdullah1989_harness_coding_assignment_1759509532124
+  name: Build harness-coding-assignment
+  orgIdentifier: default
+  projectIdentifier: Coding_Assignment
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: shahabdullah1989/harness-coding-assignment
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Install Dependencies
+                  identifier: test
+                  spec:
+                    shell: Sh
+                    command: |-
+                      sudo python3 -h -m pip install --upgrade pip
+                      pip install -r requirements.txt
+          platform:
+            os: MacOS
+            arch: Arm64
+          runtime:
+            type: Docker
+            spec: {}
+        type: CI
+        description: ""
