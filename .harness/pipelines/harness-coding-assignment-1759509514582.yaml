@@ -27,13 +27,6 @@ pipeline:
                     command: cd /Users/shahabdullah/GIT/harness-coding-assignment
                   timeout: ""
                   type: Run
-              - step:
-                  type: Run
-                  name: python version check
-                  identifier: python_version_check
-                  spec:
-                    shell: Python
-                    command: python -m pip install --upgrade pip
           platform:
             os: MacOS
             arch: Arm64
