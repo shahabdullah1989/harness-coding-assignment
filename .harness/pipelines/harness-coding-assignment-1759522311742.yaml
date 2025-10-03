@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_shahabdullah1989_harness_coding_assignment_1759522314193
+  name: Build harness-coding-assignment
+  orgIdentifier: default
+  projectIdentifier: Coding_Assessment
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: shahabdullah1989/harness-coding-assignment
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
