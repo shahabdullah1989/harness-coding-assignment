@@ -24,7 +24,7 @@ pipeline:
                   name: test
                   identifier: test
                   spec:
-                    container: python
+                    container: python:3.11
                     script: |-
                       |- pip install -r requirements.txt
                       pytest
