@@ -21,13 +21,11 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: test
+                  name: Install Dependencies
                   identifier: test
                   spec:
-                    container: python:3.11
-                    script: |-
-                      |- pip install -r requirements.txt
-                      pytest
+                    shell: Sh
+                    command: "| pip install -r requirements.txt"
           platform:
             os: MacOS
             arch: Arm64
@@ -35,3 +33,4 @@ pipeline:
             type: Docker
             spec: {}
         type: CI
+        description: ""
