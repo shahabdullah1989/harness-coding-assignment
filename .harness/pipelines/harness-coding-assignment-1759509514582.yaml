@@ -23,7 +23,8 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
-                    command: echo hello world
+                    shell: Sh
+                    command: cd /Users/shahabdullah/GIT/harness-coding-assignment
                   timeout: ""
                   type: Run
               - step:
@@ -34,9 +35,9 @@ pipeline:
                     shell: Python
                     command: python -m pip install --upgrade pip
           platform:
-            arch: Arm64
             os: MacOS
+            arch: Arm64
           runtime:
-            spec: {}
             type: Docker
+            spec: {}
         type: CI
