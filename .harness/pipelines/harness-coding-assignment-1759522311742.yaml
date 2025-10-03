@@ -26,6 +26,13 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: Run
+                  name: Install Dependencies and Run Tests
+                  identifier: Install_Dependencies_and_Run_Tests
+                  spec:
+                    container: python
+                    script: pip install -r requirements.txt pytest
           platform:
             arch: Amd64
             os: Linux
