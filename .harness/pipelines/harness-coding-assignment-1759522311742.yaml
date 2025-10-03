@@ -31,7 +31,7 @@ pipeline:
                   name: Install Dependencies and Run Tests
                   identifier: Install_Dependencies_and_Run_Tests
                   spec:
-                    container: python
+                    container: python:3.11-slim
                     script: pip install -r requirements.txt pytest
           platform:
             arch: Amd64
