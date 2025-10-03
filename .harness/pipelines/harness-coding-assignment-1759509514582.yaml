@@ -32,7 +32,7 @@ pipeline:
                   identifier: python_version_check
                   spec:
                     shell: Python
-                    command: python --version
+                    command: "--version"
           platform:
             arch: Arm64
             os: MacOS
