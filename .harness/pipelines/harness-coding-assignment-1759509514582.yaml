@@ -25,7 +25,7 @@ pipeline:
                   identifier: test
                   spec:
                     shell: Sh
-                    command: python -m pipx install --upgrade pipx
+                    command: python3 -m pip install --upgrade pip
           platform:
             os: MacOS
             arch: Arm64
