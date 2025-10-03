@@ -25,7 +25,9 @@ pipeline:
                   identifier: test
                   spec:
                     shell: Sh
-                    command: sudo python3 -h -m pip install --upgrade pip
+                    command: |-
+                      sudo python3 -h -m pip install --upgrade pip
+                      pip install -r requirements.txt
           platform:
             os: MacOS
             arch: Arm64
