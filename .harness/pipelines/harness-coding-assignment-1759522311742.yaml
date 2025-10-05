@@ -42,7 +42,8 @@ pipeline:
                       /bin/bash ./venv/bin/activate
                       pip install -r requirements.txt
                       pip install uvicorn
-                      pip list
+                      cd src
+                      python hello.py
                       pytest
           infrastructure:
             type: KubernetesDirect
