@@ -23,6 +23,9 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
+                    connectorRef: account.harnessImage
+                    image: python:3.13
+                    shell: Sh
                     command: echo hello world
                   timeout: ""
                   type: Run
@@ -31,12 +34,15 @@ pipeline:
                   name: Install Dependencies and Run Tests
                   identifier: Install_Dependencies_and_Run_Tests
                   spec:
-                    container: python:3.11-slim
-                    script: pip install -r requirements.txt pytest
-          platform:
-            arch: Amd64
-            os: Linux
-          runtime:
-            spec: {}
-            type: Cloud
+                    connectorRef: account.harnessImage
+                    image: python:3.13
+                    shell: Sh
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: k8s_local
+              namespace: harness-delegate-ng
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
         type: CI
