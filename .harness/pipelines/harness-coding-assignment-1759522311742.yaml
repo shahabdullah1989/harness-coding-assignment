@@ -24,7 +24,7 @@ pipeline:
                   name: echo
                   spec:
                     connectorRef: account.harnessImage
-                    image: python:3.13
+                    image: python:3.13.7-slim
                     shell: Sh
                     command: echo hello world
                   timeout: ""
@@ -35,7 +35,7 @@ pipeline:
                   identifier: Install_Dependencies_and_Run_Tests
                   spec:
                     connectorRef: account.harnessImage
-                    image: python:3.13
+                    image: python:3.13.7-slim
                     shell: Sh
           infrastructure:
             type: KubernetesDirect
