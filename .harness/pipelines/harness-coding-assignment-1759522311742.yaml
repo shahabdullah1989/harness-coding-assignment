@@ -39,7 +39,7 @@ pipeline:
                     shell: Sh
                     command: |-
                       python -m venv venv 
-                      bin/bash ./venv/bin activate
+                      /bin/bash ./venv/bin/activate
                       pip install -r requirements.txt
               - step:
                   type: Run
