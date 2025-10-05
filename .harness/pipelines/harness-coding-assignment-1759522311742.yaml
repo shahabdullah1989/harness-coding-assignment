@@ -38,6 +38,15 @@ pipeline:
                     image: python:3.10.10
                     shell: Sh
                     command: pip install -r requirements.txt
+              - step:
+                  type: Run
+                  name: Build Python code
+                  identifier: Build_Python_code
+                  spec:
+                    connectorRef: shahdocker
+                    image: python:3.10.10
+                    shell: Sh
+                    command: python src/server.py
           infrastructure:
             type: KubernetesDirect
             spec:
