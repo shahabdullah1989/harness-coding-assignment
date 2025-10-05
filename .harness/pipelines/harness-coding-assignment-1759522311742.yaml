@@ -23,20 +23,24 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
-                    connectorRef: account.harnessImage
-                    image: python:3.13.7-slim
+                    connectorRef: shahdocker
+                    image: python:3.10.10
                     shell: Sh
                     command: echo hello world
                   timeout: ""
                   type: Run
               - step:
                   type: Run
-                  name: Install Dependencies and Run Tests
-                  identifier: Install_Dependencies_and_Run_Tests
+                  name: Run_2
+                  identifier: Run_2
                   spec:
-                    connectorRef: account.harnessImage
-                    image: python:3.13.7-slim
+                    connectorRef: shahdocker
+                    image: python:3.10.10
                     shell: Sh
+                    command: |-
+                      |-
+                              # Run a Python command inside the container
+                              python --version
           infrastructure:
             type: KubernetesDirect
             spec:
