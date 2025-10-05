@@ -37,10 +37,7 @@ pipeline:
                     connectorRef: shahdocker
                     image: python:3.10.10
                     shell: Sh
-                    command: |-
-                      |-
-                              # Run a Python command inside the container
-                              python --version
+                    command: python --version
           infrastructure:
             type: KubernetesDirect
             spec:
