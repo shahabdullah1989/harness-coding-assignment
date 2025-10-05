@@ -31,7 +31,7 @@ pipeline:
                   type: Run
               - step:
                   type: Run
-                  name: Run_2
+                  name: Install dependencies and Build Python Code
                   identifier: Run_2
                   spec:
                     connectorRef: shahdocker
@@ -44,6 +44,8 @@ pipeline:
                       pip install uvicorn
                       pip list
                       python src/server.py
+                      PID=$(pgrep -f 'python src/server.py')
+                      kill "$PID"
           infrastructure:
             type: KubernetesDirect
             spec:
