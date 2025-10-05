@@ -44,8 +44,7 @@ pipeline:
                       pip install uvicorn
                       pip list
                       python src/server.py
-                      PID=$(pgrep -f 'python src/server.py')
-                      kill "$PID"
+                      exit
           infrastructure:
             type: KubernetesDirect
             spec:
