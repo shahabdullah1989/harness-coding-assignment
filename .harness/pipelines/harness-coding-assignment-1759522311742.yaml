@@ -36,8 +36,8 @@ pipeline:
                   spec:
                     connectorRef: shahdocker
                     image: python:3.10.10
-                    shell: Sh
-                    command: python --version
+                    shell: Python
+                    command: print ("hello World")
           infrastructure:
             type: KubernetesDirect
             spec:
