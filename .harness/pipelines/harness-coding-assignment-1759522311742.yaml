@@ -43,12 +43,7 @@ pipeline:
                       pip install -r requirements.txt
                       pip install uvicorn
                       pip list
-                      python src/server.py &
-                      APP_PID=$!
-                      echo "FastAPI running with PID $APP_PID"
-                      sleep 30
-                      kill $APP_PID
-                      echo "FastAPI stopped"
+                      pytest
           infrastructure:
             type: KubernetesDirect
             spec:
