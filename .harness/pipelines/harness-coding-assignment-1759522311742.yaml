@@ -41,6 +41,8 @@ pipeline:
                       python -m venv venv 
                       /bin/bash ./venv/bin/activate
                       pip install -r requirements.txt
+                      pip install uvicorn
+                      pip list
               - step:
                   type: Run
                   name: Build Python code
