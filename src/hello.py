@@ -11,4 +11,5 @@ if __name__ == "__main__":
     hello_world()
     
 print("Script completed.")
-time.sleep(3600)  # Keeps container alive for 1 hour
+
+time.sleep(30)
