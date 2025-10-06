@@ -54,6 +54,7 @@ pipeline:
                     repo: sabdulla1989/shahpythonmuley
                     tags:
                       - latest
+                    dockerfile: Dockerfile
           infrastructure:
             type: KubernetesDirect
             spec:
