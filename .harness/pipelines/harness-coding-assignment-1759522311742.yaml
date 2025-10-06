@@ -45,6 +45,15 @@ pipeline:
                       cd src
                       python hello.py
                       pytest
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: Build and Push to Docker
+                  identifier: Build_and_Push_to_Docker
+                  spec:
+                    connectorRef: shahdocker
+                    repo: sabdulla1989/shahpythonmuley
+                    tags:
+                      - latest
           infrastructure:
             type: KubernetesDirect
             spec:
